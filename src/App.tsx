@@ -12,7 +12,7 @@ function App() {
     fetchPokemon().then((pokemons: Pokemon[]) => {
       setPData(pokemons);
     });
-  }, []); //Runs only on the first render
+  }, []);
 
   return (
     <div className="p-top">

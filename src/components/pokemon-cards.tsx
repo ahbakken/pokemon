@@ -32,6 +32,7 @@ export const PokemonCard: React.FC<Props> = ({ pokemonList }) => {
       <div className="card-container">
         {pokemonList.map(({ name, url }, index) => (
           <Card
+            key={name}
             raised={true}
             sx={{
               margin: 2,
@@ -48,6 +49,7 @@ export const PokemonCard: React.FC<Props> = ({ pokemonList }) => {
               </CardContent>
               <Collapse in={expanded === index} timeout="auto" unmountOnExit>
                 <CardContent>
+                  {/* change this so the URL is clickable */}
                   <Typography variant="subtitle2">Url: {url}</Typography>
                 </CardContent>
               </Collapse>
